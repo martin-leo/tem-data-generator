@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Générateur JSON TeM</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+    <h1>Générateur JSON TeM</h1>
+    </header>
+    <section id="configuration">
+      <h2>Configuration :</h2>
+      <form>
+
+        <fieldset>
+          <legend>Thèmes</legend>
+
+					<div>
+						<label for="themes_nombre">Nombre de thèmes</label>
+						<p class="valeur">12</p><br>
+						<input type="range" name="themes_nombre" min="1" max="16" value="12" step=1>
+					</div>
+
+					<div>
+						<label for="themes_secondaires_max">Thèmes secondaires (max):</label>
+						<p class="valeur">3</p><br>
+						<input type="range" name="themes_secondaires_max" min="1" max="12" value="3" step=1>
+					</div>
+
+					<div>
+						<label for="themes_secondaires_probabilite">Thèmes secondaires (probabilité):</label>
+						<p class="valeur">0.1</p><br>
+						<input type="range" name="themes_secondaires_probabilite" min="0.1" max="1" value="0.1" step=.1>
+					</div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Objets</legend>
+					<div>
+						<label for="objets_nombre_min">Nombre d'objets par thème (min):</label>
+						<p class="valeur">3</p><br>
+						<input type="range" name="objets_nombre_min" min="1" max="30" value="3" step=1>
+					</div>
+
+					<div>
+						<label for="objets_nombre_max">Nombre d'objets par thème (max):</label>
+						<p class="valeur">20</p><br>
+						<input type="range" name="objets_nombre_max" min="1" max="30" value="20" step=1>
+					</div>
+        </fieldset>
+
+        <fieldset>
+          <legend>satellites</legend>
+					<div>
+						<label for="satellites_nombre_min">Nombre de satellites par objet (min):</label>
+						<p class="valeur">0</p><br>
+						<input type="range" name="satellites_nombre_min" min="0" max="5" value="0" step=1>
+					</div>
+
+					<div>
+						<label for="satellites_nombre_max">Nombre de satellites par objet (max):</label>
+						<p class="valeur">5</p><br>
+						<input type="range" name="satellites_nombre_max" min="0" max="5" value="5" step=1>
+					</div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Liens</legend>
+						<div>
+							<label for="liens_associatifs_max">Liens associatifs (max):</label>
+							<p class="valeur">3</p><br>
+							<input type="range" name="liens_associatifs_max" min="0" max="10" value="3" step=1>
+						</div>
+
+						<div>
+							<label for="liens_associatifs_probabilite">Liens associatifs (probabilité):</label>
+							<p class="valeur">0.2</p><br>
+							<input type="range" name="liens_associatifs_probabilite" min="0.1" max="1" value="0.2" step=.1>
+						</div>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id='generation'>
+      <button id="generer">Générer</button>
+    </section>
+
+    <section id="export">
+      <h2>JSON généré :</h2>
+			<form><input type="textarea" id="output"></input></form>
+    </section>
+  </main>
+	<script src='generator.js'></script>
+	<script src='main.js'></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+  background: #ececec;
+}
+
+form  {
+  display: flex;
+}
+
+legend {
+  font-weight: bold;
+  background: white;
+  border-radius: .2em;
+  padding:.8em 1em 0em;
+}
+
+fieldset, button {
+  border-radius: .2em;
+  border: none;
+  background: white;
+  flex-grow: 1;
+}
+
+input[type=textarea] {
+  border: none;
+  flex-grow: 1;
+  width: 100%;
+}
+
+#generer {
+  background: firebrick;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+#export form {
+  padding: .5em;
+  background: white;
+}
+
+.valeur {
+  color:white;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 2em;
+  padding:.25em .5em .1em;
+  background: firebrick;
+}
