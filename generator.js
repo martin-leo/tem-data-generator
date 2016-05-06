@@ -94,16 +94,19 @@ g = (function(){
 
     // racine
     root = new_object(_id(), 'TeM');
+
     // thèmes
     for (var i = 0; i < config.themes; i++) {
-      var theme = new_object(_id(), 'Thème ' + i, i);
+      var theme = new_object(_id(), 'Thème ' + i, i+1);
       add_children(root, theme);
       themes.push(theme);
     }
 
     // objets
     for (var i = 0; i < themes.length; i++) {
-      n = Math.round(Math.random() * (config.objets_par_theme.max - config.objets_par_theme.min));
+      var min = parseInt(config.objets_par_theme.min);
+      var max = parseInt(config.objets_par_theme.max);
+      var n = min + (Math.round(Math.random() * (max - min)));
       for (var j = 0; j < n; j++) {
         var objet = new_object(_id(), 'Objet ' + objets.length, themes[i].id);
         add_children(themes[i],objet);
